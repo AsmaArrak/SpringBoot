@@ -65,7 +65,7 @@
 
             <td th:if="${p.categorie != null}" th:text="${p.categorie.nom}" />
             <td th:unless="${p.categorie != null}">N/A</td>
-            <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+            <td th:if="${#authorization.expression('hasAuthority(''ADMIN'')')}">
 
                     <a th:href="@{/admin/edit/{id}(id=${p.id})}" class="fa fa-edit btn btn-warning"></a>
 
